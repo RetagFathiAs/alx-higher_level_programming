@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     oplist = {"+": add, "-": sub, "*": mul, "/": div}
     if sys.argv[3] not in list(oplist.keys()):
-      print("Unknown operator. Available operators: +, -, * and /")
-      exit(1)
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
 
     print("{} {} {} = {}".format(sys.argv[2],sys.argv[3],sys.argv[4],oplist[sys.argv[3]](sys.argv[2],sys.argv[4])))
