@@ -6,4 +6,4 @@ def no_c(my_string):
         if i == 'c' or i == 'C':
             sec_list[index] = ""
         index += 1
-    return sec_list
+    return "".join(sec_list)
