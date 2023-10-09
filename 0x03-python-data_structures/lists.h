@@ -24,4 +24,5 @@ void free_listint(listint_t *head);
 
 int is_palindrome(listint_t **head);
 int check_p(listint_t **head, listint_t *tail);
+
 #endif /* LISTS_H */
