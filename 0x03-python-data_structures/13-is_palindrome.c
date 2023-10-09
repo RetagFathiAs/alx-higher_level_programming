@@ -11,7 +11,7 @@
 int is_palindrome(listint_t **head)
 (
         if (head == NULL & *head == NULL)
-            return 1;
+            return (1);
         else
             return (check(head, *head));
 )
@@ -24,11 +24,11 @@ int is_palindrome(listint_t **head)
 int check_p(listint_t **head, listint_t *tail)
 (
         if (tail == NULL)
-                return 1;
+                return (1);
         if (check_p(*head, tail->next) && (*head)->n == tail->n)
         {
               *head = *head->next;
-              return 1;
+              return (1);
         }
-        return 0;
+        return (0);
 )
