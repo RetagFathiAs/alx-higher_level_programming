@@ -9,12 +9,12 @@
  */
 
 int is_palindrome(listint_t **head)
-(
+{
         if (head == NULL & *head == NULL)
             return (1);
         else
             return (check(head, *head));
-)
+}
  /**
  * check_p - Recursion to check each node as palindrome
  * @head: type listint_s double pointer of node
@@ -22,7 +22,7 @@ int is_palindrome(listint_t **head)
  * return: 1 if is a pilndrome 0 if not
  */             
 int check_p(listint_t **head, listint_t *tail)
-(
+{
         if (tail == NULL)
                 return (1);
         if (check_p(*head, tail->next) && (*head)->n == tail->n)
@@ -31,4 +31,4 @@ int check_p(listint_t **head, listint_t *tail)
               return (1);
         }
         return (0);
-)
+}
