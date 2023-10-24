@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ forth task """"
+
+
 class Square:
     """square"""
     def __init__(self, size=0):
