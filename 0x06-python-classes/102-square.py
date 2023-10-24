@@ -1,41 +1,21 @@
 #!/usr/bin/python3
-""" advanced """
+""" MagicClass"""
+import math
 
 
-class Square:
-    def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
-
-    @property
-    def size(self):
-        return (self.__size)
-
-    @size.setter
-    def size(self, value):
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
+class MagicClass:
+    """ represents a circle"""
+    def __init__(self, radius=0):
+        """Magic Class"""
+        self.__radius = 0
+        if type(radius) is not int and type(radius) is not float:
+            raise TypeError('radius must be a number')
+        self.__radius = radius
 
     def area(self):
-        return (self.__size * self.__size)
+        """area of the circle"""
+        return (self.__radius ** 2) * math.pi
 
-    def __eq__(self, other):
-        return self.area() == other.area()
-
-    def __ne__(self, other):
-        return self.area() != other.area()
-
-    def __lt__(self, other):
-        return self.area() < other.area()
-
-    def __le__(self, other):
-        return self.area() <= other.area()
-
-    def __gt__(self, other):
-        return self.area() > other.area()
-
-    def __ge__(self, other):
-        return self.area() >= other.area()
+    def circumference(self):
+        """circumference of the circle"""
+        return 2 * math.pi * self.__radius
