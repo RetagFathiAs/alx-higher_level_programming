@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ alx fun """
+
+
 class Square:
     """Type class square"""
     def __init__(self, size=0):
