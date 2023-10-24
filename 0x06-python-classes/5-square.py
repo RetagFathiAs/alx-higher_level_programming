@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" python """
+
+
 class Square:
     """Type class square"""
     def __init__(self, size):
