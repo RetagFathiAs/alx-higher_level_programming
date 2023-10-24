@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ alx is good """
+
+
 class Square:
     """type class square"""
     def __init__(self, size=0, position=(0, 0)):
