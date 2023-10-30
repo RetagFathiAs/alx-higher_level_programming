@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """
 add_integer module
-this function adds two integers
+function adds integers
 
 """
 
 
 def add_integer(a, b=98):
-    """Return the integer addition of a an b
-    Raise: TypeError
+    """Return the integer addition of a anي b
+    Raise: 
+        TypeError
     """
     if ((not isinstance(a, int) and not isinstance(a, float))):
         raise TypeError("a must be an integer")
