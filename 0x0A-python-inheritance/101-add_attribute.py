@@ -3,6 +3,7 @@
 
 
 def add_attribute(ob, name, value):
+    """uygyuhhu """
     if hasattr(ob, '__dict__'):
         setattr(ob, name, value)
     else:
