@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-hjhjhj jhjhj
+write in a file 
 """
 
 def write_file(filename="", text=""):
-    """ jjkkkkkkkkkkkkkkkkkkkjjjjjjjjjjjj"""
+    """ write in a file jhhhhhhhhhhh"""
     with open(filename, 'w', encoding="UTF-8") as f:
         return f.write(text)
