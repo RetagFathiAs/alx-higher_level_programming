@@ -3,12 +3,14 @@
 
 
 class Student:
+    """ fffffile """
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
+        """ fffiilee """
         dic1 = {}
         dic2 = {}
         if attrs is None:
@@ -24,6 +26,7 @@ class Student:
         return dic1
 
     def reload_from_json(self, json):
+        """ fiiiiiiiiiileeeeeeeeee """
         if hasattr(self, '__dict__'):
             for key, value in json.items():
                 self.__dict__[key] = value
