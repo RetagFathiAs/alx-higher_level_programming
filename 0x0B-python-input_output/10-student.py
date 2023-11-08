@@ -1,26 +1,17 @@
 #!/usr/bin/python3
-"""class Student"""
 
 
 class Student:
-    """ 10-student.py fffffile """
+
     def __init__(self, first_name, last_name, age):
+
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-            """ 10-student.py fffffile """
-        dic1 = {}
-        dic2 = {}
-        if attrs is None:
-            return self.__dict__
-        totalargs = len(attrs)
-        if hasattr(self, '__dict__'):
-            dic1 = self.__dict__
-            for key, value in dic1.items():
-                for i in range(totalargs):
-                    if key == attrs[i]:
-                        dic2[key] = value
-            return dic2
-        return dic1
+
+        if(type(attrs) == list and all(type(element) == str
+                                       for element in attrs)):
+            return {i: getattr(self, i) for i in attrs if hasattr(self, i)}
+        return self.__dict__
