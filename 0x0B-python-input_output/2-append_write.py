@@ -3,6 +3,7 @@
 
 
 def append_write(filename="", text=""):
+    """ huttersdxvbcbjjolukufxch """
     n = 0
     with open(filename, mode="a", encoding="utf-8") as f:
         n = f.write(text)
