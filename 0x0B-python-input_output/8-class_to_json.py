@@ -3,6 +3,7 @@
 
 
 def class_to_json(obj):
+    """ jhjhjhjhjjh yyyyyyyyyyyyyyyy """
     dic1 = {}
     if hasattr(obj, '__dict__'):
         return obj.__dict__
