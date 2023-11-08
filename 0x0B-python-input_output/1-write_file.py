@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-""" counting number of lines in a File"""
+""" number of lines in a File"""
 
 
 def number_of_lines(filename=""):
+    """ grdgrdg """
     with open(filename, encoding="utf-8") as f:
         numlines = 0
         while True:
