@@ -3,6 +3,7 @@
 
 
 def pascal_triangle(n):
+    """ tfghoivb fyghiuljdcvhjl """
     list1 = []
     if n <= 0:
         return list1
