@@ -1,2 +1,2 @@
--- 5-full_table.sql
+-- 5-full_table show
 SHOW CREAT TABLE first_table;
