@@ -18,8 +18,8 @@ if __name__ == "__main__":
     count = 0
     for row in session.query(State).filter(
             State.name == sys.argv[4]).order_by(State.id):
-            print(row.id)
-            count = count + 1
+        print(row.id)
+        count += 1
     if count == 0:
         print("Not found")
     session.close()
