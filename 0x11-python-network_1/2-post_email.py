@@ -1,15 +1,15 @@
-#!/usr/bin/python3
-""" sends a POST"""
+import sys
 import urllib.request
 import urllib.parse
-import sys
 
+def send_post_request(url, email):
+    data = urllib.parse.urlencode({'email': email})
+    data = data.encode('ascii')
+    with urllib.request.urlopen(url, data) as response:
+        print(response.read().decode('utf-8'))
+
+# Usage: python script.py <url> <email>
 if __name__ == "__main__":
-    listargs = sys.argv
-    values = {'email': listargs[2]}
-    data = urllib.parse.urlencode(values)
-    data = data.encode()
-    req = urllib.request.Request(listargs[1], data)
-    with urllib.request.urlopen(req) as response:
-        html = response.read().decode('utf-8')
-    print(html)
+    url = sys.argv[1]
+    email = sys.argv[2]
+    send_post_request(url, email)
