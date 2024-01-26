@@ -1,15 +1,27 @@
-import sys
-import urllib.request
-import urllib.parse
+#!/usr/bin/python3
+"""send an email to url"""
 
-def send_post_request(url, email):
-    data = urllib.parse.urlencode({'email': email})
-    data = data.encode('ascii')
-    with urllib.request.urlopen(url, data) as response:
-        print(response.read().decode('utf-8'))
+from urllib import request, error, parse
+from sys import argv
 
-# Usage: python script.py <url> <email>
+
+def send_email_to_url(url: str, email: str) -> str:
+    """
+    Send a request to the URL specified and
+    get the response headers
+    Args:
+        url (str): The URL to query
+    """
+    data = {}
+    data['email'] = email
+    data = parse.urlencode(data).encode('utf-8')
+    req = request.Request(url, data, method="POST")
+    try:
+        with request.urlopen(req) as response:
+            return response.read().decode("utf-8")
+    except error.URLError as e:
+        return e.reason
+
+
 if __name__ == "__main__":
-    url = sys.argv[1]
-    email = sys.argv[2]
-    send_post_request(url, email)
+    print(send_email_to_url(argv[1], argv[2]))
