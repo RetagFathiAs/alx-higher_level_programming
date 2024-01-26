@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-""" sends and url and displays value"""
-import urllib.request
+"""Fetches a URL and displays the value of the X-Request-Id variable"""
 import sys
+from urllib import request, error
 
 if __name__ == "__main__":
-    listargs = sys.argv
-    req = urllib.request.Request(listargs[1])
-    with urllib.request.urlopen(req) as response:
-        html = response.info()
-    print(html['X-Request-Id'])
+    url = sys.argv[1]
+    try:
+        with request.urlopen(url) as response:
+            print(response.headers.get('X-Request-Id'))
+    except error.URLError:
+        print("Cannot connect to {}".format(url))
