@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" fetch an url with requests"""
+""" url with requests"""
 import requests
 
 if __name__ == "__main__":
