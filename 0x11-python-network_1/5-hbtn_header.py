@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" sends and url and displays value header with requests"""
+""" sends and url requests"""
 import requests
 import sys
 
