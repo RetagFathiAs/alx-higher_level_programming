@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-""" fetch an url"""
-import urllib.request
+"""Fetches https://alx-intranet.hbtn.io/status"""
+from urllib import request, error
 
-
-req = urllib.request.Request('https://intranet.hbtn.io/status')
-with urllib.request.urlopen(req) as response:
-    html = response.read()
-
-print("Body response:\n\t- type: {}\n\t- content: {}\n\t- utf8 content: {}"
-      .format(type(html), html, html.decode('utf-8')))
+if __name__ == "__main__":
+    url = "https://alx-intranet.hbtn.io/status"
+    try:
+        with request.urlopen(url) as response:
+            response = response.read()
+            print("Body response:")
+            print("\t- type: {}".format(type(response)))
+            print("\t- content: {}".format(response))
+            print("\t- utf8 content: {}".format(response.decode('utf-8')))
+    except error.URLError:
+        print("Cannot connect to https://alx-intranet.hbtn.io/status")
