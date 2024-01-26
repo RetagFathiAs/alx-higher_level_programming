@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" sends and url and displays value"""
+""" sends & displays value"""
 import urllib.request
 import sys
 
